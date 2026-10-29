@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudPilot AI — Nexora Enterprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Local Vendor Scripts for 100% Offline Demonstration (with CDN Fallbacks) -->
+  <script src="vendor/tailwind.js" onerror="this.onerror=null;this.src='https://cdn.tailwindcss.com';"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#F4F7FB',
+            navy: '#163A5F',
+            azure: '#0078D4',
+            card: '#FFFFFF',
+            text: '#172B4D',
+            secondary: '#667085',
+            border: '#E1E8F0',
+            success: '#16865B',
+            warning: '#D97706',
+            error: '#DC2626',
+            ai: '#6750A4',
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <script src="vendor/react.production.min.js" onerror="this.onerror=null;this.src='https://unpkg.com/react@18/umd/react.production.min.js';"></script>
+  <script src="vendor/react-dom.production.min.js" onerror="this.onerror=null;this.src='https://unpkg.com/react-dom@18/umd/react-dom.production.min.js';"></script>
+  <script src="vendor/prop-types.min.js" onerror="this.onerror=null;this.src='https://unpkg.com/prop-types@15.8.1/prop-types.min.js';"></script>
+  <script src="vendor/babel.min.js" onerror="this.onerror=null;this.src='https://unpkg.com/@babel/standalone/babel.min.js';"></script>
+  <script src="vendor/Recharts.js" onerror="this.onerror=null;this.src='https://unpkg.com/recharts@2.12.7/umd/Recharts.js';"></script>
+  <script src="vendor/lucide.js" onerror="this.onerror=null;this.src='https://unpkg.com/lucide@latest/dist/umd/lucide.js';"></script>
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; background: #F4F7FB; margin: 0; }
+    .font-heading { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
+    .sidebar-transition { transition: width 0.2s ease, transform 0.2s ease; }
+    .msg-user { background: #0078D4; color: white; border-radius: 12px 12px 2px 12px; }
+    .msg-assistant { background: white; border: 1px solid #E1E8F0; border-radius: 12px 12px 12px 2px; }
+    .insight-card { border-left: 3px solid #6750A4; }
+    @media (max-width: 768px) {
+      .sidebar-mobile { transform: translateX(-100%); }
+      .sidebar-mobile.open { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="app.js"></script>
+</body>
+</html>

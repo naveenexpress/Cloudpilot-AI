@@ -1,0 +1,34 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor and IDE directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment and credentials
+.env
+.env.local
+*.pem
+*.key
+*.cert
+*.pfx
+
+# Test, browser profiles, and runtime artifacts
+tests/.babel-cache.js
+tests/.chrome-temp-profile*
+tests/.temp-e2e-dump.html
+*.html.dump
+*.log
+
+# Build & release packages
+dist/
+release/
+*.zip
+*.tar.gz

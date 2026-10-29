@@ -1,0 +1,28 @@
+{
+  "name": "cloudpilot-ai",
+  "version": "1.0.0",
+  "description": "Intelligent enterprise operational governance prototype featuring simulated Azure telemetry and deterministic grounded AI Copilot.",
+  "main": "app.js",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "test": "node tests/run-tests.js",
+    "test:e2e": "node tests/e2e-browser-test.js",
+    "test:interactive": "node tests/full-interactive-e2e.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naveenexpress/Cloudpilot-AI.git"
+  },
+  "keywords": [
+    "azure",
+    "react",
+    "enterprise",
+    "copilot",
+    "ai",
+    "dashboard",
+    "telemetry",
+    "governance"
+  ],
+  "author": "naveenexpress",
+  "license": "MIT"
+}

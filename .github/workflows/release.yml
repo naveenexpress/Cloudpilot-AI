@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run verification tests
+        run: node tests/run-tests.js
+
+      - name: Package release artifact
+        run: |
+          zip -r "cloudpilot-ai-${{ github.ref_name }}.zip" index.html app.js package.json README.md LICENSE vendor tests
+          sha256sum "cloudpilot-ai-${{ github.ref_name }}.zip" > checksums.txt
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            cloudpilot-ai-${{ github.ref_name }}.zip
+            checksums.txt
+          generate_release_notes: true
